@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NOIRÉ — Armá tu look</title>
+<meta name="description" content="Vestí a la modelo a tu manera: elegí cada prenda y accesorio según el stock real de la tienda.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=5">
+</head>
+<body class="page-looklab">
+
+<!-- ══════════════════════ HEADER ══════════════════════ -->
+<header class="header header--static is-solid" id="header">
+  <div class="header__inner">
+    <a href="index.html" class="back-link">
+      <img src="assets/icons/arrow-left.png" class="ico-img" alt="" aria-hidden="true">
+      <span>Volver</span>
+    </a>
+    <a href="index.html" class="logo" aria-label="NOIRÉ — Inicio">Noiré</a>
+    <div class="header__actions">
+      <button class="icon-link" aria-label="Buscar">
+        <span class="icon-link__label">Search</span>
+        <img src="assets/icons/search.png" class="ico-img" alt="" aria-hidden="true">
+      </button>
+      <button class="icon-link" aria-label="Ver carrito">
+        <span class="icon-link__label">Cart (<span id="cartCount">0</span>)</span>
+        <img src="assets/icons/cart.png" class="ico-img" alt="" aria-hidden="true">
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="looklab">
+  <div class="looklab__intro">
+    <p class="eyebrow">Shop the Look</p>
+    <h1 class="section-title section-title--light">Armá tu<br>look</h1>
+    <p class="looklab__text">Elegí cada prenda y accesorio a tu gusto — todo según lo que hay disponible ahora mismo en la tienda.</p>
+  </div>
+
+  <div class="looklab__layout">
+
+    <!-- ───── Tablero: el look elegido, pieza por pieza ───── -->
+    <div class="board" id="board" aria-label="Tu look"></div>
+
+    <!-- ───── Selector: elegí cada prenda por lugar del cuerpo ───── -->
+    <div class="picker">
+      <div class="picker-slots" id="pickerSlots" role="tablist" aria-label="Elegir por prenda"></div>
+      <div class="picker-options" id="pickerOptions"></div>
+    </div>
+  </div>
+
+  <!-- ───── Resumen + agregar todo al carrito ───── -->
+  <div class="looklab__summary" id="summary">
+    <div class="looklab__summary-info">
+      <span class="looklab__summary-count" id="summaryCount">0 prendas elegidas</span>
+      <span class="looklab__summary-total" id="summaryTotal">$0.00</span>
+    </div>
+    <div class="looklab__summary-actions">
+      <button class="link-arrow link-arrow--light" id="clearLook" type="button">Vaciar todo</button>
+      <button class="btn btn--ghost" id="addLookBtn" type="button">Agregar look al carrito</button>
+    </div>
+    <p class="looklab__summary-msg" id="summaryMsg" role="status"></p>
+  </div>
+</main>
+
+<script src="js/products.js?v=4"></script>
+<script src="js/cart.js"></script>
+<script src="js/cart-drawer.js"></script>
+<script src="js/look-builder.js"></script>
+<script src="js/main.js?v=3"></script>
+</body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NOIRÉ — Timeless style. Modern attitude.</title>
+<meta name="description" content="NOIRÉ — Indumentaria minimalista. Explorá la nueva colección The After Hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=5">
+</head>
+<body>
+
+<!-- ══════════════════════ HEADER ══════════════════════ -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer">
+      <span class="menu-btn__lines"><i></i><i></i><i></i></span>
+      <span class="menu-btn__label">Menu</span>
+    </button>
+
+    <a href="#" class="logo" aria-label="NOIRÉ — Inicio">Noiré</a>
+
+    <div class="header__actions">
+      <button class="icon-link" id="searchBtn" aria-label="Buscar">
+        <span class="icon-link__label">Search</span>
+        <img src="assets/icons/search.png" class="ico-img" alt="" aria-hidden="true">
+      </button>
+      <button class="icon-link" id="cartBtn" aria-label="Ver carrito">
+        <span class="icon-link__label">Cart (<span id="cartCount">0</span>)</span>
+        <img src="assets/icons/cart.png" class="ico-img" alt="" aria-hidden="true">
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════ DRAWER ══════════════════════ -->
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menú principal" hidden>
+  <div class="drawer__backdrop" data-close-drawer></div>
+  <nav class="drawer__panel">
+    <button class="drawer__close" data-close-drawer aria-label="Cerrar menú">
+      <img src="assets/icons/close.png" class="ico-img ico-img--lg" alt="" aria-hidden="true">
+    </button>
+    <ul class="drawer__nav">
+      <li><a href="#new-in">New In</a></li>
+      <li><a href="catalogo.html?cat=Ropa">Ropa</a></li>
+      <li><a href="catalogo.html?cat=Accesorios">Accesorios</a></li>
+      <li><a href="#collections">Colecciones</a></li>
+      <li><a href="catalogo.html">Sale</a></li>
+    </ul>
+    <div class="drawer__foot">
+      <a href="#">Mi Cuenta</a>
+      <a href="#">Contacto</a>
+    </div>
+  </nav>
+</div>
+
+<main>
+
+<!-- ══════════════════════ HERO ══════════════════════ -->
+<section class="hero" id="hero">
+
+  <!-- SLIDE 01 -->
+  <article class="hero__slide is-active" data-slide="0">
+    <div class="hero__media hero__media--portrait" style="--img: var(--img-hero-1)"></div>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__copy">
+      <p class="eyebrow">New Collection</p>
+      <h1 class="hero__title">The After<br>Hours</h1>
+      <span class="rule"></span>
+      <p class="hero__text">Designed for the moments<br>you don't plan.</p>
+      <a href="look.html" class="btn btn--ghost">Explore Collection</a>
+    </div>
+
+    <!-- HOTSPOTS: click en la prenda → aparece el precio -->
+    <div class="hotspots">
+      <div class="hotspot" style="--x:52%; --y:42%">
+        <button class="hotspot__toggle" aria-expanded="false" aria-label="Ver precio de Oversized Blazer">
+          <span class="hotspot__dot"><span class="hotspot__plus"></span></span>
+          <span class="hotspot__line"></span>
+        </button>
+        <span class="hotspot__card">
+          <span class="hotspot__name">Oversized Blazer</span>
+          <span class="hotspot__price">$89.00</span>
+          <a href="producto.html?id=oversized-blazer" class="hotspot__link">Ver producto</a>
+        </span>
+      </div>
+
+      <div class="hotspot" style="--x:65%; --y:60%">
+        <button class="hotspot__toggle" aria-expanded="false" aria-label="Ver precio de Chaleco Cropped">
+          <span class="hotspot__dot"><span class="hotspot__plus"></span></span>
+          <span class="hotspot__line"></span>
+        </button>
+        <span class="hotspot__card">
+          <span class="hotspot__name">Chaleco Cropped</span>
+          <span class="hotspot__price">$59.00</span>
+          <a href="producto.html?id=silk-shirt" class="hotspot__link">Ver producto</a>
+        </span>
+      </div>
+    </div>
+  </article>
+
+  <!-- SLIDE 02 -->
+  <article class="hero__slide" data-slide="1">
+    <div class="hero__media" style="--img: var(--img-hero-2)"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__copy">
+      <p class="eyebrow">Essentials</p>
+      <h1 class="hero__title">Quiet<br>Luxury</h1>
+      <span class="rule"></span>
+      <p class="hero__text">Las piezas que nunca<br>pasan de moda.</p>
+      <a href="catalogo.html?collection=essentials" class="btn btn--ghost">Explore Collection</a>
+    </div>
+    <div class="hotspots">
+      <div class="hotspot" style="--x:70%; --y:26%">
+        <button class="hotspot__toggle" aria-expanded="false" aria-label="Ver precio de Cashmere Coat">
+          <span class="hotspot__dot"><span class="hotspot__plus"></span></span>
+          <span class="hotspot__line"></span>
+        </button>
+        <span class="hotspot__card">
+          <span class="hotspot__name">Cashmere Coat</span>
+          <span class="hotspot__price">$149.00</span>
+          <a href="producto.html?id=cashmere-coat" class="hotspot__link">Ver producto</a>
+        </span>
+      </div>
+      <div class="hotspot" style="--x:66%; --y:52%">
+        <button class="hotspot__toggle" aria-expanded="false" aria-label="Ver precio de Straight Jean">
+          <span class="hotspot__dot"><span class="hotspot__plus"></span></span>
+          <span class="hotspot__line"></span>
+        </button>
+        <span class="hotspot__card">
+          <span class="hotspot__name">Straight Jean</span>
+          <span class="hotspot__price">$72.00</span>
+          <a href="producto.html?id=straight-jean" class="hotspot__link">Ver producto</a>
+        </span>
+      </div>
+    </div>
+  </article>
+
+  <!-- SLIDE 03 -->
+  <article class="hero__slide" data-slide="2">
+    <div class="hero__media" style="--img: var(--img-hero-3)"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__copy">
+      <p class="eyebrow">After Dark</p>
+      <h1 class="hero__title">Night<br>Stories</h1>
+      <span class="rule"></span>
+      <p class="hero__text">Para las noches que<br>se vuelven historia.</p>
+      <a href="catalogo.html?collection=after-dark" class="btn btn--ghost">Explore Collection</a>
+    </div>
+    <div class="hotspots">
+      <div class="hotspot" style="--x:68%; --y:34%">
+        <button class="hotspot__toggle" aria-expanded="false" aria-label="Ver precio de Satin Slip Dress">
+          <span class="hotspot__dot"><span class="hotspot__plus"></span></span>
+          <span class="hotspot__line"></span>
+        </button>
+        <span class="hotspot__card">
+          <span class="hotspot__name">Satin Slip Dress</span>
+          <span class="hotspot__price">$95.00</span>
+          <a href="producto.html?id=satin-slip-dress" class="hotspot__link">Ver producto</a>
+        </span>
+      </div>
+      <div class="hotspot" style="--x:60%; --y:57%">
+        <button class="hotspot__toggle" aria-expanded="false" aria-label="Ver precio de Pointed Boots">
+          <span class="hotspot__dot"><span class="hotspot__plus"></span></span>
+          <span class="hotspot__line"></span>
+        </button>
+        <span class="hotspot__card">
+          <span class="hotspot__name">Pointed Boots</span>
+          <span class="hotspot__price">$79.00</span>
+          <a href="producto.html?id=pointed-boots" class="hotspot__link">Ver producto</a>
+        </span>
+      </div>
+    </div>
+  </article>
+
+  <!-- Controles -->
+  <div class="hero__dots" role="tablist" aria-label="Slides de portada">
+    <button class="hero__dot is-active" data-goto="0" role="tab" aria-selected="true">01</button>
+    <button class="hero__dot" data-goto="1" role="tab" aria-selected="false">02</button>
+    <button class="hero__dot" data-goto="2" role="tab" aria-selected="false">03</button>
+  </div>
+
+  <a href="#shop-the-look" class="hero__scroll" aria-label="Bajar">
+    <img src="assets/icons/arrow-down.png" class="ico-img" alt="" aria-hidden="true">
+  </a>
+</section>
+
+<!-- ══════════════════════ SHOP THE LOOK ══════════════════════ -->
+<section class="stl" id="shop-the-look">
+  <div class="stl__intro">
+    <h2 class="section-title">Shop the Look</h2>
+    <p class="stl__text">Explora cada pieza del outfit y encontrá tu combinación perfecta.</p>
+    <a href="look.html" class="link-arrow">Ver look completo <span class="arrow"></span></a>
+  </div>
+
+  <div class="stl__media">
+    <div class="stl__img" style="--img: var(--img-look)"></div>
+    <button class="hotspot hotspot--plain" style="--x:40%; --y:23%" data-target="p-blazer" aria-label="Ver Oversized Blazer">
+      <span class="hotspot__dot"><span class="hotspot__plus"></span></span>
+    </button>
+    <button class="hotspot hotspot--plain" style="--x:42%; --y:59%" data-target="p-trouser" aria-label="Ver Wide Leg Trouser">
+      <span class="hotspot__dot"><span class="hotspot__plus"></span></span>
+    </button>
+  </div>
+
+  <ul class="stl__list">
+    <li class="stl__item" id="p-blazer">
+      <div class="stl__thumb" style="--img: var(--img-p1)"></div>
+      <div class="stl__info">
+        <h3>Oversized Blazer</h3>
+        <p class="price">$89.00</p>
+        <a href="producto.html?id=oversized-blazer" class="link-arrow link-arrow--sm">Ver producto <span class="arrow"></span></a>
+      </div>
+    </li>
+    <li class="stl__item" id="p-trouser">
+      <div class="stl__thumb" style="--img: var(--img-p2)"></div>
+      <div class="stl__info">
+        <h3>Wide Leg Trouser</h3>
+        <p class="price">$64.00</p>
+        <a href="producto.html?id=wide-leg-trouser" class="link-arrow link-arrow--sm">Ver producto <span class="arrow"></span></a>
+      </div>
+    </li>
+    <li class="stl__item" id="p-bag">
+      <div class="stl__thumb" style="--img: var(--img-p3)"></div>
+      <div class="stl__info">
+        <h3>Minimal Bag</h3>
+        <p class="price">$49.00</p>
+        <a href="producto.html?id=minimal-bag" class="link-arrow link-arrow--sm">Ver producto <span class="arrow"></span></a>
+      </div>
+    </li>
+    <li class="stl__item" id="p-boots">
+      <div class="stl__thumb" style="--img: var(--img-p4)"></div>
+      <div class="stl__info">
+        <h3>Pointed Boots</h3>
+        <p class="price">$79.00</p>
+        <a href="producto.html?id=pointed-boots" class="link-arrow link-arrow--sm">Ver producto <span class="arrow"></span></a>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<!-- ══════════════════════ NEW IN ══════════════════════ -->
+<section class="newin" id="new-in">
+  <div class="newin__intro">
+    <p class="eyebrow">New In</p>
+    <h2 class="section-title section-title--light">Descubrí<br>lo nuevo</h2>
+    <a href="descubri.html" class="link-arrow link-arrow--light">Ver todo <span class="arrow"></span></a>
+  </div>
+
+  <div class="newin__right">
+    <ul class="newin__track" id="newinTrack">
+      <li class="card">
+        <a href="producto.html?id=ribbed-tank-top" class="card__media" style="--img: var(--img-n1)"><span class="card__quick">Ver producto</span></a>
+        <h3 class="card__name">Ribbed Tank Top</h3>
+        <p class="price price--light">$29.00</p>
+      </li>
+      <li class="card">
+        <a href="producto.html?id=leather-jacket" class="card__media" style="--img: var(--img-n2)"><span class="card__quick">Ver producto</span></a>
+        <h3 class="card__name">Leather Jacket</h3>
+        <p class="price price--light">$129.00</p>
+      </li>
+      <li class="card">
+        <a href="producto.html?id=satin-shirt" class="card__media" style="--img: var(--img-n3)"><span class="card__quick">Ver producto</span></a>
+        <h3 class="card__name">Satin Shirt</h3>
+        <p class="price price--light">$69.00</p>
+      </li>
+      <li class="card">
+        <a href="producto.html?id=tailored-pants" class="card__media" style="--img: var(--img-n4)"><span class="card__quick">Ver producto</span></a>
+        <h3 class="card__name">Tailored Pants</h3>
+        <p class="price price--light">$69.00</p>
+      </li>
+      <li class="card">
+        <a href="producto.html?id=knit-cardigan" class="card__media" style="--img: var(--img-n5)"><span class="card__quick">Ver producto</span></a>
+        <h3 class="card__name">Knit Cardigan</h3>
+        <p class="price price--light">$85.00</p>
+      </li>
+    </ul>
+
+    <div class="newin__nav">
+      <button class="round-btn" id="prevBtn" aria-label="Anterior"><img src="assets/icons/arrow-left.png" class="ico-img" alt="" aria-hidden="true"></button>
+      <button class="round-btn" id="nextBtn" aria-label="Siguiente"><img src="assets/icons/arrow-right.png" class="ico-img" alt="" aria-hidden="true"></button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ COLLECTIONS ══════════════════════ -->
+<section class="collections" id="collections">
+  <div class="collections__intro">
+    <p class="eyebrow eyebrow--dark">Collections</p>
+    <h2 class="section-title">Elegí tu<br>mundo</h2>
+    <p class="collections__text">Cada colección tiene su propia historia.<br>¿Cuál es la tuya?</p>
+    <a href="catalogo.html" class="link-arrow">Explorar colecciones <span class="arrow"></span></a>
+  </div>
+
+  <div class="collections__grid">
+    <a href="catalogo.html?collection=essentials" class="coll" style="--img: var(--img-c1)">
+      <span class="coll__num">01</span>
+      <span class="coll__body">
+        <span class="coll__name">Essentials</span>
+        <span class="coll__desc">Minimal pieces for everyday.</span>
+      </span>
+    </a>
+    <a href="catalogo.html?collection=after-dark" class="coll" style="--img: var(--img-c2)">
+      <span class="coll__num">02</span>
+      <span class="coll__body">
+        <span class="coll__name">After Dark</span>
+        <span class="coll__desc">For nights that become stories.</span>
+      </span>
+    </a>
+    <a href="catalogo.html?collection=summer-state" class="coll" style="--img: var(--img-c3)">
+      <span class="coll__num">03</span>
+      <span class="coll__body">
+        <span class="coll__name">Summer State</span>
+        <span class="coll__desc">Light, fresh &amp; made to last.</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════════════ NEWSLETTER ══════════════════════ -->
+<section class="news">
+  <div class="news__copy">
+    <p class="eyebrow">Be part of Noiré</p>
+    <h2 class="section-title section-title--light">Sé la primera<br>en enterarte</h2>
+    <p class="news__text">Suscribite y recibí lanzamientos exclusivos, promociones y más.</p>
+    <form class="news__form" id="newsForm" novalidate>
+      <input type="email" id="newsEmail" placeholder="Tu email" aria-label="Tu email" required>
+      <button type="submit" aria-label="Suscribirme"><img src="assets/icons/arrow-right.png" class="ico-img" alt="" aria-hidden="true"></button>
+      <p class="news__msg" id="newsMsg" role="status"></p>
+    </form>
+  </div>
+  <div class="news__media" style="--img: var(--img-news)"></div>
+</section>
+
+<!-- ══════════════════════ BENEFITS ══════════════════════ -->
+<section class="benefits">
+  <div class="benefit">
+    <img src="assets/icons/delivery.png" class="ico-img ico-img--lg" alt="" aria-hidden="true">
+    <div><h4>Envíos a todo el país</h4><p>En compras mayores a $90.000</p></div>
+  </div>
+  <div class="benefit">
+    <img src="assets/icons/returns.png" class="ico-img ico-img--lg" alt="" aria-hidden="true">
+    <div><h4>Cambios y devoluciones</h4><p>Hasta 30 días</p></div>
+  </div>
+  <div class="benefit">
+    <img src="assets/icons/payment-card.png" class="ico-img ico-img--lg" alt="" aria-hidden="true">
+    <div><h4>Pagá en cuotas</h4><p>Con todas las tarjetas</p></div>
+  </div>
+  <div class="benefit">
+    <img src="assets/icons/headset.png" class="ico-img ico-img--lg" alt="" aria-hidden="true">
+    <div><h4>Atención personalizada</h4><p>Estamos para ayudarte</p></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__brand">
+      <a href="#" class="logo logo--dark">Noiré</a>
+      <p>Timeless style.<br>Modern attitude.</p>
+    </div>
+
+    <div class="footer__col">
+      <h5>Shop</h5>
+      <ul><li><a href="#new-in">New In</a></li><li><a href="catalogo.html?cat=Ropa">Ropa</a></li><li><a href="catalogo.html?cat=Accesorios">Accesorios</a></li><li><a href="#collections">Colecciones</a></li><li><a href="catalogo.html">Sale</a></li></ul>
+    </div>
+    <div class="footer__col">
+      <h5>Info</h5>
+      <ul><li><a href="#">Sobre Nosotros</a></li><li><a href="#">Guía de Talles</a></li><li><a href="#">Envíos</a></li><li><a href="#">Cambios y Devoluciones</a></li><li><a href="#">Preguntas Frecuentes</a></li></ul>
+    </div>
+    <div class="footer__col">
+      <h5>Ayuda</h5>
+      <ul><li><a href="#">Mi Cuenta</a></li><li><a href="#">Seguimiento de Pedido</a></li><li><a href="#">Métodos de Pago</a></li><li><a href="#">Contacto</a></li></ul>
+    </div>
+    <div class="footer__col">
+      <h5>Seguinos</h5>
+      <ul class="footer__social">
+        <li><a href="#"><img src="assets/icons/instagram-dark.png" class="ico-img" alt="" aria-hidden="true"> Instagram</a></li>
+        <li><a href="#"><img src="assets/icons/pinterest-dark.png" class="ico-img" alt="" aria-hidden="true"> Pinterest</a></li>
+        <li><a href="#"><img src="assets/icons/tiktok-dark.png" class="ico-img" alt="" aria-hidden="true"> TikTok</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <p>&copy; 2026 NOIRÉ. Todos los derechos reservados.</p>
+    <p><a href="#">Términos y Condiciones</a><span>|</span><a href="#">Privacidad</a></p>
+  </div>
+</footer>
+
+<script src="js/products.js?v=4"></script>
+<script src="js/cart.js"></script>
+<script src="js/cart-drawer.js"></script>
+<script src="js/main.js?v=3"></script>
+</body>
+</html>

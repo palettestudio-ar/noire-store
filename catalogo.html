@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NOIRÉ — Catálogo</title>
+<meta name="description" content="Todo el catálogo NOIRÉ: prendas, colores y estilos disponibles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=5">
+</head>
+<body>
+
+<!-- ══════════════════════ HEADER ══════════════════════ -->
+<header class="header header--static is-solid" id="header">
+  <div class="header__inner">
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer">
+      <span class="menu-btn__lines"><i></i><i></i><i></i></span>
+      <span class="menu-btn__label">Menu</span>
+    </button>
+
+    <a href="index.html" class="logo" aria-label="NOIRÉ — Inicio">Noiré</a>
+
+    <div class="header__actions">
+      <button class="icon-link" aria-label="Buscar">
+        <span class="icon-link__label">Search</span>
+        <img src="assets/icons/search.png" class="ico-img" alt="" aria-hidden="true">
+      </button>
+      <button class="icon-link" aria-label="Ver carrito">
+        <span class="icon-link__label">Cart (<span id="cartCount">0</span>)</span>
+        <img src="assets/icons/cart.png" class="ico-img" alt="" aria-hidden="true">
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════ DRAWER ══════════════════════ -->
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menú principal" hidden>
+  <div class="drawer__backdrop" data-close-drawer></div>
+  <nav class="drawer__panel">
+    <button class="drawer__close" data-close-drawer aria-label="Cerrar menú">
+      <img src="assets/icons/close.png" class="ico-img ico-img--lg" alt="" aria-hidden="true">
+    </button>
+    <ul class="drawer__nav">
+      <li><a href="index.html#new-in">New In</a></li>
+      <li><a href="catalogo.html?cat=Ropa">Ropa</a></li>
+      <li><a href="catalogo.html?cat=Accesorios">Accesorios</a></li>
+      <li><a href="index.html#collections">Colecciones</a></li>
+      <li><a href="catalogo.html">Sale</a></li>
+    </ul>
+    <div class="drawer__foot">
+      <a href="#">Mi Cuenta</a>
+      <a href="#">Contacto</a>
+    </div>
+  </nav>
+</div>
+
+<main>
+  <section class="shop">
+    <nav class="crumbs" aria-label="Ruta">
+      <a href="index.html">Inicio</a><span>/</span>
+      <em>Catálogo</em>
+    </nav>
+
+    <div class="shop__head">
+      <p class="eyebrow eyebrow--dark" id="shopEyebrow">Catálogo</p>
+      <h1 class="section-title" id="shopTitle">Toda la<br>colección</h1>
+      <p class="shop__text" id="shopText">Explorá cada prenda, elegí tu color y encontrá tu talle — según disponibilidad real de la tienda.</p>
+      <a href="catalogo.html" class="link-arrow" id="shopClear" hidden>Ver todo el catálogo <span class="arrow"></span></a>
+    </div>
+
+    <div class="shop__filters" id="filters" role="tablist" aria-label="Filtrar por categoría"></div>
+
+    <p class="shop__count" id="shopCount"></p>
+
+    <ul class="shop__grid" id="shopGrid"></ul>
+  </section>
+</main>
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__brand">
+      <a href="index.html" class="logo logo--dark">Noiré</a>
+      <p>Timeless style.<br>Modern attitude.</p>
+    </div>
+
+    <div class="footer__col">
+      <h5>Shop</h5>
+      <ul>
+        <li><a href="index.html#new-in">New In</a></li>
+        <li><a href="catalogo.html?cat=Ropa">Ropa</a></li>
+        <li><a href="catalogo.html?cat=Accesorios">Accesorios</a></li>
+        <li><a href="index.html#collections">Colecciones</a></li>
+        <li><a href="catalogo.html">Sale</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h5>Info</h5>
+      <ul><li><a href="#">Sobre Nosotros</a></li><li><a href="#">Guía de Talles</a></li><li><a href="#">Envíos</a></li><li><a href="#">Cambios y Devoluciones</a></li><li><a href="#">Preguntas Frecuentes</a></li></ul>
+    </div>
+    <div class="footer__col">
+      <h5>Ayuda</h5>
+      <ul><li><a href="#">Mi Cuenta</a></li><li><a href="#">Seguimiento de Pedido</a></li><li><a href="#">Métodos de Pago</a></li><li><a href="#">Contacto</a></li></ul>
+    </div>
+    <div class="footer__col">
+      <h5>Seguinos</h5>
+      <ul class="footer__social">
+        <li><a href="#"><img src="assets/icons/instagram-dark.png" class="ico-img" alt="" aria-hidden="true"> Instagram</a></li>
+        <li><a href="#"><img src="assets/icons/pinterest-dark.png" class="ico-img" alt="" aria-hidden="true"> Pinterest</a></li>
+        <li><a href="#"><img src="assets/icons/tiktok-dark.png" class="ico-img" alt="" aria-hidden="true"> TikTok</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <p>&copy; 2026 NOIRÉ. Todos los derechos reservados.</p>
+    <p><a href="#">Términos y Condiciones</a><span>|</span><a href="#">Privacidad</a></p>
+  </div>
+</footer>
+
+<script src="js/products.js?v=4"></script>
+<script src="js/cart.js"></script>
+<script src="js/cart-drawer.js"></script>
+<script src="js/catalog.js?v=5"></script>
+<script src="js/main.js?v=3"></script>
+</body>
+</html>

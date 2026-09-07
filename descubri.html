@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NOIRÉ — Descubrí lo nuevo</title>
+<meta name="description" content="Explorá el catálogo NOIRÉ por temporada, color y categoría.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=5">
+</head>
+<body class="page-looklab">
+
+<!-- ══════════════════════ HEADER ══════════════════════ -->
+<header class="header header--static is-solid" id="header">
+  <div class="header__inner">
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer">
+      <span class="menu-btn__lines"><i></i><i></i><i></i></span>
+      <span class="menu-btn__label">Menu</span>
+    </button>
+    <a href="index.html" class="logo" aria-label="NOIRÉ — Inicio">Noiré</a>
+    <div class="header__actions">
+      <button class="icon-link" aria-label="Buscar">
+        <span class="icon-link__label">Search</span>
+        <img src="assets/icons/search.png" class="ico-img" alt="" aria-hidden="true">
+      </button>
+      <button class="icon-link" aria-label="Ver carrito">
+        <span class="icon-link__label">Cart (<span id="cartCount">0</span>)</span>
+        <img src="assets/icons/cart.png" class="ico-img" alt="" aria-hidden="true">
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════ DRAWER ══════════════════════ -->
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menú principal" hidden>
+  <div class="drawer__backdrop" data-close-drawer></div>
+  <nav class="drawer__panel">
+    <button class="drawer__close" data-close-drawer aria-label="Cerrar menú">
+      <img src="assets/icons/close.png" class="ico-img ico-img--lg" alt="" aria-hidden="true">
+    </button>
+    <ul class="drawer__nav">
+      <li><a href="index.html#new-in">New In</a></li>
+      <li><a href="catalogo.html?cat=Ropa">Ropa</a></li>
+      <li><a href="catalogo.html?cat=Accesorios">Accesorios</a></li>
+      <li><a href="index.html#collections">Colecciones</a></li>
+      <li><a href="catalogo.html">Sale</a></li>
+    </ul>
+    <div class="drawer__foot">
+      <a href="#">Mi Cuenta</a>
+      <a href="#">Contacto</a>
+    </div>
+  </nav>
+</div>
+
+<div class="back-row">
+  <a href="index.html" class="back-link">
+    <img src="assets/icons/arrow-left.png" class="ico-img" alt="" aria-hidden="true">
+    <span>Volver</span>
+  </a>
+</div>
+
+<main class="discover">
+  <div class="discover__head">
+    <div>
+      <h1 class="section-title section-title--light">Descubrí<br>lo nuevo</h1>
+      <p class="discover__text">Explorá nuestras colecciones por temporada, color y categoría.</p>
+    </div>
+    <a href="catalogo.html" class="link-arrow link-arrow--light">Ver todo <span class="arrow"></span></a>
+  </div>
+
+  <div class="discover__layout">
+
+    <!-- ───── Sidebar de filtros ───── -->
+    <aside class="discover__sidebar">
+      <h2 class="discover__sidebar-title">Filtrar por</h2>
+
+      <div class="filter-group is-open">
+        <button class="filter-group__head" data-toggle>Temporada <span class="filter-group__icon">–</span></button>
+        <ul class="filter-group__list">
+          <li><a href="catalogo.html?season=verano">Verano</a></li>
+          <li><a href="catalogo.html?season=otono">Otoño</a></li>
+          <li><a href="catalogo.html?season=invierno">Invierno</a></li>
+          <li><a href="catalogo.html?season=primavera">Primavera</a></li>
+        </ul>
+      </div>
+
+      <div class="filter-group">
+        <button class="filter-group__head" data-toggle>Categoría <span class="filter-group__icon">+</span></button>
+        <ul class="filter-group__list">
+          <li><a href="catalogo.html?cat=Ropa">Ropa</a></li>
+          <li><a href="catalogo.html?cat=Accesorios">Accesorios</a></li>
+          <li><a href="catalogo.html?cat=Calzado">Calzado</a></li>
+        </ul>
+      </div>
+
+      <div class="filter-group">
+        <button class="filter-group__head" data-toggle>Color <span class="filter-group__icon">+</span></button>
+        <ul class="filter-group__list">
+          <li><a href="catalogo.html?family=neutros">Neutros</a></li>
+          <li><a href="catalogo.html?family=negros">Negros</a></li>
+          <li><a href="catalogo.html?family=blancos">Blancos</a></li>
+          <li><a href="catalogo.html?family=tierra">Tierra</a></li>
+          <li><a href="catalogo.html?family=verdes">Verdes</a></li>
+          <li><a href="catalogo.html?family=azules">Azules</a></li>
+          <li><a href="catalogo.html?family=rojos">Rojos</a></li>
+        </ul>
+      </div>
+
+      <div class="filter-group">
+        <button class="filter-group__head" data-toggle>Colección <span class="filter-group__icon">+</span></button>
+        <ul class="filter-group__list">
+          <li><a href="catalogo.html?collection=essentials">Essentials</a></li>
+          <li><a href="catalogo.html?collection=after-dark">After Dark</a></li>
+          <li><a href="catalogo.html?collection=summer-state">Summer State</a></li>
+        </ul>
+      </div>
+
+      <a href="index.html#new-in" class="discover__newin">
+        <div class="discover__newin-img" style="--img:url('../assets/img/discover-new/17-sidebar-new-in.png')"></div>
+        <div class="discover__newin-body">
+          <p class="eyebrow">New In</p>
+          <h3>Lo más reciente,<br>siempre para vos.</h3>
+          <span class="link-arrow link-arrow--light">Ver nuevo ingreso <span class="arrow"></span></span>
+        </div>
+      </a>
+    </aside>
+
+    <!-- ───── Contenido principal ───── -->
+    <div class="discover__main">
+
+      <!-- Temporadas -->
+      <div class="discover__grid discover__grid--4">
+        <a href="catalogo.html?season=verano" class="coll" style="--img:url('../assets/img/discover-new/01-season-summer.png')">
+          <span class="coll__body">
+            <span class="coll__name">Verano</span>
+            <span class="coll__desc">Colección ligera y fresca.</span>
+            <span class="coll__cta">Ver colección <span class="arrow"></span></span>
+          </span>
+        </a>
+        <a href="catalogo.html?season=otono" class="coll" style="--img:url('../assets/img/discover-new/02-season-autumn.png')">
+          <span class="coll__body">
+            <span class="coll__name">Otoño</span>
+            <span class="coll__desc">Capas livianas, tonos cálidos.</span>
+            <span class="coll__cta">Ver colección <span class="arrow"></span></span>
+          </span>
+        </a>
+        <a href="catalogo.html?season=invierno" class="coll" style="--img:url('../assets/img/discover-new/03-season-winter.png')">
+          <span class="coll__body">
+            <span class="coll__name">Invierno</span>
+            <span class="coll__desc">Abrigos, texturas y esenciales.</span>
+            <span class="coll__cta">Ver colección <span class="arrow"></span></span>
+          </span>
+        </a>
+        <a href="catalogo.html?season=primavera" class="coll" style="--img:url('../assets/img/discover-new/04-season-spring.png')">
+          <span class="coll__body">
+            <span class="coll__name">Primavera</span>
+            <span class="coll__desc">Renovate con colores y flores.</span>
+            <span class="coll__cta">Ver colección <span class="arrow"></span></span>
+          </span>
+        </a>
+      </div>
+
+      <!-- Explorá por color -->
+      <section class="discover__section">
+        <div class="discover__section-head">
+          <h2 class="section-title section-title--light">Explorá por color</h2>
+          <a href="catalogo.html" class="link-arrow link-arrow--light">Ver todos <span class="arrow"></span></a>
+        </div>
+        <div class="discover__grid discover__grid--7">
+          <a href="catalogo.html?family=neutros" class="color-card" style="--img:url('../assets/img/discover-new/05-color-neutral.png')"><span>Neutros</span></a>
+          <a href="catalogo.html?family=negros" class="color-card" style="--img:url('../assets/img/discover-new/06-color-black.png')"><span>Negros</span></a>
+          <a href="catalogo.html?family=blancos" class="color-card" style="--img:url('../assets/img/discover-new/07-color-white.png')"><span>Blancos</span></a>
+          <a href="catalogo.html?family=tierra" class="color-card" style="--img:url('../assets/img/discover-new/08-color-earth.png')"><span>Tierra</span></a>
+          <a href="catalogo.html?family=verdes" class="color-card" style="--img:url('../assets/img/discover-new/09-color-green.png')"><span>Verdes</span></a>
+          <a href="catalogo.html?family=azules" class="color-card" style="--img:url('../assets/img/discover-new/10-color-blue.png')"><span>Azules</span></a>
+          <a href="catalogo.html?family=rojos" class="color-card" style="--img:url('../assets/img/discover-new/11-color-red.png')"><span>Rojos</span></a>
+        </div>
+      </section>
+
+      <!-- Comprá por categoría -->
+      <section class="discover__section">
+        <div class="discover__section-head">
+          <h2 class="section-title section-title--light">Comprá por categoría</h2>
+          <a href="catalogo.html" class="link-arrow link-arrow--light">Ver todas <span class="arrow"></span></a>
+        </div>
+        <div class="discover__grid discover__grid--5">
+          <a href="catalogo.html?category=superiores" class="coll coll--sm" style="--img:url('../assets/img/discover-new/12-category-tops.png')">
+            <span class="coll__body"><span class="coll__name">Prendas Superiores</span><span class="coll__cta">Ver todo <span class="arrow"></span></span></span>
+          </a>
+          <a href="catalogo.html?category=inferiores" class="coll coll--sm" style="--img:url('../assets/img/discover-new/13-category-bottoms.png')">
+            <span class="coll__body"><span class="coll__name">Prendas Inferiores</span><span class="coll__cta">Ver todo <span class="arrow"></span></span></span>
+          </a>
+          <a href="catalogo.html?category=vestidos" class="coll coll--sm" style="--img:url('../assets/img/discover-new/14-category-dresses-single.png')">
+            <span class="coll__body"><span class="coll__name">Vestidos</span><span class="coll__cta">Ver todo <span class="arrow"></span></span></span>
+          </a>
+          <a href="catalogo.html?category=abrigos" class="coll coll--sm" style="--img:url('../assets/img/discover-new/15-category-coats.png')">
+            <span class="coll__body"><span class="coll__name">Abrigos &amp; Chaquetas</span><span class="coll__cta">Ver todo <span class="arrow"></span></span></span>
+          </a>
+          <a href="catalogo.html?category=accesorios" class="coll coll--sm" style="--img:url('../assets/img/discover-new/16-category-accessories.png')">
+            <span class="coll__body"><span class="coll__name">Accesorios</span><span class="coll__cta">Ver todo <span class="arrow"></span></span></span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Colecciones destacadas -->
+      <section class="discover__section">
+        <div class="discover__section-head">
+          <h2 class="section-title section-title--light">Colecciones destacadas</h2>
+          <a href="catalogo.html" class="link-arrow link-arrow--light">Ver todas <span class="arrow"></span></a>
+        </div>
+        <div class="discover__grid discover__grid--4">
+          <a href="look.html" class="coll" style="--img:url('../assets/img/discover-new/18-featured-after-hours.png')">
+            <span class="coll__body"><span class="coll__name">The After Hours</span><span class="coll__desc">Invierno 24</span><span class="coll__cta">Ver colección <span class="arrow"></span></span></span>
+          </a>
+          <a href="catalogo.html?collection=essentials" class="coll" style="--img:url('../assets/img/discover-new/19-featured-essentials.png')">
+            <span class="coll__body"><span class="coll__name">Essentials</span><span class="coll__desc">Capsule Collection</span><span class="coll__cta">Ver colección <span class="arrow"></span></span></span>
+          </a>
+          <a href="catalogo.html?collection=summer-state" class="coll" style="--img:url('../assets/img/discover-new/20-featured-linen-edit.png')">
+            <span class="coll__body"><span class="coll__name">Linen Edit</span><span class="coll__desc">Verano 24</span><span class="coll__cta">Ver colección <span class="arrow"></span></span></span>
+          </a>
+          <a href="catalogo.html?collection=after-dark" class="coll" style="--img:url('../assets/img/discover-new/21-featured-city-lights.png')">
+            <span class="coll__body"><span class="coll__name">City Lights</span><span class="coll__desc">Otoño 24</span><span class="coll__cta">Ver colección <span class="arrow"></span></span></span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<!-- ══════════════════════ BENEFICIOS ══════════════════════ -->
+<section class="benefits">
+  <div class="benefit">
+    <img src="assets/icons/delivery.png" class="ico-img ico-img--lg" alt="" aria-hidden="true">
+    <div><h4>Envíos a todo el país</h4><p>En compras mayores a $90.000</p></div>
+  </div>
+  <div class="benefit">
+    <img src="assets/icons/returns.png" class="ico-img ico-img--lg" alt="" aria-hidden="true">
+    <div><h4>Cambios y devoluciones</h4><p>Hasta 30 días</p></div>
+  </div>
+  <div class="benefit">
+    <img src="assets/icons/payment-card.png" class="ico-img ico-img--lg" alt="" aria-hidden="true">
+    <div><h4>Pagá en cuotas</h4><p>Con todas las tarjetas</p></div>
+  </div>
+  <div class="benefit">
+    <img src="assets/icons/headset.png" class="ico-img ico-img--lg" alt="" aria-hidden="true">
+    <div><h4>Atención personalizada</h4><p>Estamos para ayudarte</p></div>
+  </div>
+</section>
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__brand">
+      <a href="index.html" class="logo logo--dark">Noiré</a>
+      <p>Timeless style.<br>Modern attitude.</p>
+    </div>
+    <div class="footer__col">
+      <h5>Shop</h5>
+      <ul>
+        <li><a href="index.html#new-in">New In</a></li>
+        <li><a href="catalogo.html?cat=Ropa">Ropa</a></li>
+        <li><a href="catalogo.html?cat=Accesorios">Accesorios</a></li>
+        <li><a href="index.html#collections">Colecciones</a></li>
+        <li><a href="catalogo.html">Sale</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h5>Info</h5>
+      <ul><li><a href="#">Sobre Nosotros</a></li><li><a href="#">Guía de Talles</a></li><li><a href="#">Envíos</a></li><li><a href="#">Cambios y Devoluciones</a></li><li><a href="#">Preguntas Frecuentes</a></li></ul>
+    </div>
+    <div class="footer__col">
+      <h5>Ayuda</h5>
+      <ul><li><a href="#">Mi Cuenta</a></li><li><a href="#">Seguimiento de Pedido</a></li><li><a href="#">Métodos de Pago</a></li><li><a href="#">Contacto</a></li></ul>
+    </div>
+    <div class="footer__col">
+      <h5>Seguinos</h5>
+      <ul class="footer__social">
+        <li><a href="#"><img src="assets/icons/instagram-dark.png" class="ico-img" alt="" aria-hidden="true"> Instagram</a></li>
+        <li><a href="#"><img src="assets/icons/pinterest-dark.png" class="ico-img" alt="" aria-hidden="true"> Pinterest</a></li>
+        <li><a href="#"><img src="assets/icons/tiktok-dark.png" class="ico-img" alt="" aria-hidden="true"> TikTok</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>&copy; 2026 NOIRÉ. Todos los derechos reservados.</p>
+    <p><a href="#">Términos y Condiciones</a><span>|</span><a href="#">Privacidad</a></p>
+  </div>
+</footer>
+
+<script src="js/products.js?v=4"></script>
+<script src="js/cart.js"></script>
+<script src="js/cart-drawer.js"></script>
+<script src="js/discover.js"></script>
+<script src="js/main.js?v=3"></script>
+</body>
+</html>

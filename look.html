@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NOIRÉ — Look 01: The After Hours</title>
+<meta name="description" content="El look completo The After Hours: cada pieza, con su precio, lista para comprar junta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=5">
+</head>
+<body class="page-looklab">
+
+<!-- ══════════════════════ HEADER ══════════════════════ -->
+<header class="header header--static is-solid" id="header">
+  <div class="header__inner">
+    <a href="index.html" class="back-link">
+      <img src="assets/icons/arrow-left.png" class="ico-img" alt="" aria-hidden="true">
+      <span>Volver</span>
+    </a>
+    <a href="index.html" class="logo" aria-label="NOIRÉ — Inicio">Noiré</a>
+    <div class="header__actions">
+      <button class="icon-link" aria-label="Buscar">
+        <span class="icon-link__label">Search</span>
+        <img src="assets/icons/search.png" class="ico-img" alt="" aria-hidden="true">
+      </button>
+      <button class="icon-link" aria-label="Ver carrito">
+        <span class="icon-link__label">Cart (<span id="cartCount">0</span>)</span>
+        <img src="assets/icons/cart.png" class="ico-img" alt="" aria-hidden="true">
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="looklook">
+
+  <!-- ══════════════════════ HERO DEL LOOK ══════════════════════ -->
+  <section class="look-hero">
+    <div class="look-hero__intro">
+      <p class="eyebrow">Look 01</p>
+      <h1 class="section-title section-title--light">The After<br>Hours</h1>
+      <span class="rule"></span>
+      <p class="look-hero__text">Un look monocromático y sofisticado. Piezas clave que definen elegancia y actitud.</p>
+      <div class="look-hero__buy">
+        <button class="btn btn--ghost" id="buyLookBtn" type="button">Comprar look completo</button>
+        <span class="look-hero__price" id="lookTotal"></span>
+      </div>
+      <a href="armar-look.html" class="link-arrow link-arrow--light">Personalizar este look <span class="arrow"></span></a>
+      <p class="look-hero__msg" id="buyMsg" role="status"></p>
+    </div>
+
+    <div class="look-hero__stage">
+      <div class="look-hero__img" style="--img:url('../assets/img/look-01/01-model-main.png')"></div>
+      <div class="hotspots" id="lookHotspots"></div>
+    </div>
+
+    <ul class="stl__list look-hero__list" id="lookList"></ul>
+  </section>
+
+  <!-- ══════════════════════ DETALLES DEL LOOK ══════════════════════ -->
+  <section class="look-details">
+    <div class="look-details__img" style="--img:url('../assets/img/look-01/02-model-closeup.png')"></div>
+    <div class="look-details__body">
+      <h2 class="section-title section-title--light">Detalles<br>del look</h2>
+      <ul class="look-details__list">
+        <li>
+          <img src="assets/icons/plus.png" class="ico-img" alt="" aria-hidden="true">
+          <div><h4>Silueta relajada</h4><p>Prendas de cortes amplios que aportan comodidad y estilo.</p></div>
+        </li>
+        <li>
+          <img src="assets/icons/minus.png" class="ico-img" alt="" aria-hidden="true">
+          <div><h4>Monocromático</h4><p>El negro total estiliza y eleva cualquier look.</p></div>
+        </li>
+        <li>
+          <img src="assets/icons/arrow-right.png" class="ico-img" alt="" aria-hidden="true">
+          <div><h4>Versátil</h4><p>Ideal para eventos nocturnos o para un look de oficina.</p></div>
+        </li>
+      </ul>
+    </div>
+    <div class="look-details__img" style="--img:url('../assets/img/look-01/03-model-back.png')"></div>
+  </section>
+
+  <!-- ══════════════════════ TAMBIÉN TE PUEDE GUSTAR ══════════════════════ -->
+  <section class="newin">
+    <div class="newin__intro">
+      <p class="eyebrow">También te puede gustar</p>
+      <h2 class="section-title section-title--light">Completá<br>el look</h2>
+      <a href="catalogo.html" class="link-arrow link-arrow--light">Ver todo <span class="arrow"></span></a>
+    </div>
+    <div class="newin__right">
+      <ul class="newin__track" id="newinTrack"></ul>
+      <div class="newin__nav">
+        <button class="round-btn" id="prevBtn" aria-label="Anterior"><img src="assets/icons/arrow-left.png" class="ico-img" alt="" aria-hidden="true"></button>
+        <button class="round-btn" id="nextBtn" aria-label="Siguiente"><img src="assets/icons/arrow-right.png" class="ico-img" alt="" aria-hidden="true"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ BENEFICIOS ══════════════════════ -->
+  <section class="benefits">
+    <div class="benefit">
+      <img src="assets/icons/delivery.png" class="ico-img ico-img--lg" alt="" aria-hidden="true">
+      <div><h4>Envíos a todo el país</h4><p>En compras mayores a $90.000</p></div>
+    </div>
+    <div class="benefit">
+      <img src="assets/icons/returns.png" class="ico-img ico-img--lg" alt="" aria-hidden="true">
+      <div><h4>Cambios y devoluciones</h4><p>Hasta 30 días</p></div>
+    </div>
+    <div class="benefit">
+      <img src="assets/icons/payment-card.png" class="ico-img ico-img--lg" alt="" aria-hidden="true">
+      <div><h4>Pagá en cuotas</h4><p>Con todas las tarjetas</p></div>
+    </div>
+    <div class="benefit">
+      <img src="assets/icons/headset.png" class="ico-img ico-img--lg" alt="" aria-hidden="true">
+      <div><h4>Atención personalizada</h4><p>Estamos para ayudarte</p></div>
+    </div>
+  </section>
+
+</main>
+
+<script src="js/products.js?v=4"></script>
+<script src="js/cart.js"></script>
+<script src="js/cart-drawer.js"></script>
+<script src="js/look-page.js"></script>
+<script src="js/main.js?v=3"></script>
+</body>
+</html>
