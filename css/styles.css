@@ -279,10 +279,15 @@ img{max-width:100%;display:block}
   /* El título de cada slide ocupa casi todo el ancho entre ~28% y ~66%
      de la altura del hero en mobile, así que los hotspots van todos
      debajo de ese bloque de texto para no superponerse. */
+  /* En el hero-2, con recorte "center" el modelo queda casi fuera de
+     cuadro en mobile (solo se ve un borde pegado a la pared). Se
+     desplaza el encuadre hacia la derecha para que se vea completa. */
+  .hero__media--offset-right{ background-position:80% 30%; }
+
   .hotspot--h1-blazer{ --x:85%; --y:74%; }
   .hotspot--h1-vest{ --x:85%; --y:64%; }
-  .hotspot--h2-coat{ --x:88%; --y:74%; }
-  .hotspot--h2-jean{ --x:70%; --y:90%; }
+  .hotspot--h2-coat{ --x:42%; --y:23%; }
+  .hotspot--h2-jean{ --x:62%; --y:90%; }
   .hotspot--h3-dress{ --x:85%; --y:74%; }
   .hotspot--h3-boots{ --x:68%; --y:90%; }
 }
