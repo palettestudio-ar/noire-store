@@ -280,7 +280,7 @@ img{max-width:100%;display:block}
      de la altura del hero en mobile, así que los hotspots van todos
      debajo de ese bloque de texto para no superponerse. */
   .hotspot--h1-blazer{ --x:85%; --y:74%; }
-  .hotspot--h1-vest{ --x:68%; --y:90%; }
+  .hotspot--h1-vest{ --x:85%; --y:64%; }
   .hotspot--h2-coat{ --x:88%; --y:74%; }
   .hotspot--h2-jean{ --x:70%; --y:90%; }
   .hotspot--h3-dress{ --x:85%; --y:74%; }
