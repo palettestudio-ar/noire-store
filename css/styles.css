@@ -258,6 +258,34 @@ img{max-width:100%;display:block}
   color:var(--white);
   pointer-events:auto;
 }
+
+/* Posiciones por prenda, hero "The After Hours" (hero-1.jpg).
+   La imagen se recorta con background-size:cover — el recorte horizontal
+   cambia mucho entre mobile (angosto, corta casi todo el ancho) y desktop
+   (ancho, corta poco o nada), así que un solo %,% no sirve para los dos:
+   se define un valor para desktop y se pisa en mobile. */
+.hotspot--h1-blazer{ --x:60%; --y:47%; }
+.hotspot--h1-vest{ --x:67%; --y:62%; }
+
+/* Hero "Quiet Luxury" (hero-2.jpg) */
+.hotspot--h2-coat{ --x:74%; --y:27%; }
+.hotspot--h2-jean{ --x:73%; --y:68%; }
+
+/* Hero "Night Stories" (hero-3.jpg) */
+.hotspot--h3-dress{ --x:74%; --y:42%; }
+.hotspot--h3-boots{ --x:71%; --y:85%; }
+
+@media (max-width:600px){
+  /* El título de cada slide ocupa casi todo el ancho entre ~28% y ~66%
+     de la altura del hero en mobile, así que los hotspots van todos
+     debajo de ese bloque de texto para no superponerse. */
+  .hotspot--h1-blazer{ --x:85%; --y:74%; }
+  .hotspot--h1-vest{ --x:68%; --y:90%; }
+  .hotspot--h2-coat{ --x:88%; --y:74%; }
+  .hotspot--h2-jean{ --x:70%; --y:90%; }
+  .hotspot--h3-dress{ --x:85%; --y:74%; }
+  .hotspot--h3-boots{ --x:68%; --y:90%; }
+}
 .hotspot__toggle{
   display:flex;align-items:center;gap:0;color:inherit;cursor:pointer;
 }
@@ -520,7 +548,7 @@ img{max-width:100%;display:block}
   :root{--header-h:64px}
   .icon-link__label{display:none}
   .header__actions{gap:20px}
-  .hero__overlay{background:linear-gradient(180deg,rgba(8,8,8,.72) 0%,rgba(8,8,8,.35) 45%,rgba(8,8,8,.85) 100%)}
+  .hero__overlay{background:linear-gradient(180deg,rgba(8,8,8,.72) 0%,rgba(8,8,8,.22) 45%,rgba(8,8,8,.12) 70%,rgba(8,8,8,.55) 100%)}
   .hero__copy{max-width:none}
   .hotspot__card{white-space:normal;max-width:120px}
   .hotspot.is-open .hotspot__line{width:34px}
